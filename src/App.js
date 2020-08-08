@@ -1,25 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
+import { HashRouter, Route } from "react-router-dom";
+import Middleware from './Services/Middleware';
+import Layout from "./Components/Auth/Layout";
+import Home from './Components/Home/Home';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HashRouter>
+          <Route exact path="/login" render={() => <Layout load="login" /> } />
+          <Route exact path="/register" render={() => <Layout load="register" /> } />
+          {/* Form Steps Routes */}
+          <Middleware exact path="/" component={Home} posts='all'/>
+          <Middleware exact path="/timeline" component={Home} posts='timeline'/>
+    </HashRouter>
   );
 }
 
