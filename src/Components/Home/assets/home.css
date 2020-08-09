@@ -393,14 +393,12 @@
     border: none;
     display: block;
     height: 44px;
-    padding: 13px 90px 13px 20px;
+    padding: 13px 110px 13px 20px;
     position: relative;
     border-radius: 50px;
     overflow: hidden;
     resize: none;
     background-color: #f1f1f1;
-    -webkit-box-shadow: inset 0px 1px 10px 0px rgba(85, 85, 85, 0.2);
-            box-shadow: inset 0px 1px 10px 0px rgba(85, 85, 85, 0.2);
     -webkit-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease;

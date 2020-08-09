@@ -39,8 +39,7 @@ export default function Posts({data}) {
                     <div className="share-content-box w-100">
                         <form onSubmit={handleSubmit(onSubmit)} className="share-text-box">
                             <textarea ref={register({ required: true })} name="body"
-                             className="share-text-field" aria-disabled="true" placeholder="Say Something" data-toggle="modal" 
-                             data-target="#textbox" id="email"></textarea>
+                             className="share-text-field" placeholder="Say Something" data-target="#textbox"></textarea>
                             <button className="btn-share" type="submit">share</button>
                         </form>
                         {errors.body && <span style={{marginLeft: '7%'}} className="my-form-error">This field is required</span>}

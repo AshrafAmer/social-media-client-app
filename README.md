@@ -1,3 +1,8 @@
+# Project Intro:
+
+Simple Social media Application, users can able to register, login and share posts.
+Each user can able to share posts, see other posts, and filter only its posts.
+Able to see Online users, to add, follow or communicate in future work.
 
 ## Project Libraries:
 
@@ -16,6 +21,9 @@ Dom Buildings for react router [react-router-dom](https://www.npmjs.com/package/
 ### bootstrap:
 Responsive UI web design.
 
+### Custome Pagination:
+See Only 3 or 5 posts per page, and flip posts using our pagination.
+
 ### fontawsome:
 Responsive font icons, used in home page.
 
@@ -23,25 +31,34 @@ Responsive font icons, used in home page.
 ## Project Structure:
 
 ### Services
-at this files, we configure all APIs which used inside different components.
+At this files, we configure all APIs which used inside different components.
 
 #### API.js
-fot Server side API url.
+For Server side API url. Export it for whole application.
 
 #### auth.services.js
-all auth functions and APIs logic listed here, such as login and register
+All auth functions and APIs logic listed here, such as login and register
 
 #### Middleware.js
-control and manage all requests. No public users can access home page. and also no logged in users can access login or register pages.
+Control and manage all requests. 
+No public users can access home page, and also no logged in users can access login or register pages.
 
 #### posts.service.js
-as like as auth services, we listed all posts' logics here, and handle errors. just dealing with `Callback functions` inside components.
+As like as auth.services, we listed all posts' logics here, and handle errors. just dealing with shared `Callback` functions inside components.
 
 ### Components
 we have 5 main components in this simple project
 
 #### 1. Auth Component
 for all related design login and register UI.
+
+![Login Image](./screenshots/login.PNG)
+![Login Error](./screenshots/login_err.png)
+![Login Error](./screenshots/login_err2.png)
+
+![Register Image](./screenshots/register.png)
+![Register Error](./screenshots/register_err.png)
+![Register Error](./screenshots/register_err2.png)
 
 #### 2. Header Component
 Maybe in other projects we can have pulic and private header, with different functionalities.
@@ -51,6 +68,8 @@ list, create, and filter posts. all posts' components listed inside this folder.
 
 #### 4. Home Component
 Active users,  my profile card, and home layout are listed inside this collection.
+![Home Page](./screenshots/home.png)
+![Timeline Page](./screenshots/timeline.png)
 
 #### 5. Profile Component
 at this simple project, its just a card. but maybe in near future it will be a full component.
@@ -78,8 +97,12 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Learn More
+## How to use
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* `npm start` to start our application on your local browser.
+* Go to register page, to create your own account.
+* It will redirect you by default to login page.
+* Login and start Share un limited posts with others.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Author
+Copyright © Ashraf Amer

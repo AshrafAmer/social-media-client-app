@@ -89,7 +89,7 @@ export default function Register() {
                       <div className="form-check form-check-inline female-option">
                         <input className="form-check-input" type="radio"ref={register({ required: true })}  name="gender" id="inlineRadio2" value="f" />
                         <label className="form-check-label my-form-label">Female</label>
-                      </div>
+                      </div><br />
 
                         {errors.gender && <span className="my-form-error">This field is required</span>}
                       </div>

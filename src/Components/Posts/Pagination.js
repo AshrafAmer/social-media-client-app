@@ -5,7 +5,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCommentAlt } from '@fortawesome/free-solid-svg-icons';
 
 const buttonStyles = {
-  
+  height: '40px',
+  width: '40px',
+  borderRadius: '5px',
+  padding: '8px',
+  margin: '2px'
 };
 
 const Pagination = ({ itemsperpage, items}) => {
@@ -64,14 +68,14 @@ const Pagination = ({ itemsperpage, items}) => {
                       {...getFastBackButtonProps()}
                       disabled={goFastBackBdisabled}
                     >
-                      {"<<"}
+                      &lt;&lt;
                     </button>
                     <button
                       style={buttonStyles}
                       {...getBackButtonProps()}
                       disabled={goBackBdisabled}
                     >
-                      {"<"}
+                      &lt;
                     </button>
                     {Array.from(
                       { length: pagesforarray },
@@ -80,6 +84,7 @@ const Pagination = ({ itemsperpage, items}) => {
                       return (
                         <button
                           key={page}
+                          style={buttonStyles}
                           {...getSelPageButtonProps({ page: page })}
                           disabled={currentpage == page}
                         >
@@ -92,14 +97,14 @@ const Pagination = ({ itemsperpage, items}) => {
                       {...getFwdButtonProps()}
                       disabled={goFwdBdisabled}
                     >
-                      {">"}
+                      &gt;
                     </button>
                     <button
                       style={buttonStyles}
                       {...getFastFwdButtonProps()}
                       disabled={goFastFwdBdisabled}
                     >
-                      {">>"}
+                      &gt;&gt;
                     </button>
                   </td>
                 </tr></tbody></table>
